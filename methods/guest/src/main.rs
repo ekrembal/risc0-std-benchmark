@@ -11,10 +11,15 @@ pub fn main() {
     // TODO: Implement your guest code here
 
     // read the input
-    let input: u32 = env::read();
+    let num_input: u32 = env::read();
+    let mut sum: u32 = 0;
+    for _ in 0..num_input {
+        let input: u32 = env::read();
+        sum += input;
+    }
 
     // TODO: do something with the input
 
     // write public output to the journal
-    env::commit(&input);
+    env::commit(&sum);
 }
